@@ -1,4 +1,4 @@
-# MarkItDown — Menú contextual para Windows
+# MarkItDown. Menú contextual para Windows
 
 Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows, usando [MarkItDown](https://github.com/microsoft/markitdown) de Microsoft.
 
@@ -81,7 +81,7 @@ Y elimina la carpeta **"Convertir a Markdown"**.
 
 ## Notas
 
-- Al instalar con `markitdown[all]` puede aparecer un aviso sobre `ffmpeg`. No es un error — solo significa que la conversión de archivos de **audio** no estará disponible. Todos los demás formatos funcionan con normalidad.
+- Al instalar con `markitdown[all]` puede aparecer un aviso sobre `ffmpeg`. No es un error, solo significa que la conversión de archivos de **audio** no estará disponible. Todos los demás formatos funcionan con normalidad.
 - El script usa `pythonw.exe` para que la conversión ocurra en segundo plano, sin abrir una ventana de terminal.
 
 ## Créditos
