@@ -41,9 +41,6 @@ Esta capacidad de normalizar grandes volúmenes de información hace que MarkItD
 ## Formatos compatibles
 
 PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), imágenes, HTML, CSV, JSON, XML, ZIP, entre otros.
-## Formatos compatibles
-
-PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), imágenes, HTML, CSV, JSON, XML, ZIP, entre otros.
 
 ## Requisitos
 
