@@ -4,6 +4,43 @@ Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Window
 
 Soporta conversión individual y selección múltiple de archivos.
 
+## ¿Qué es MarkItDown?
+
+MarkItDown es una herramienta de código abierto desarrollada por Microsoft que convierte documentos y archivos de múltiples formatos a **Markdown**, un formato de texto ligero ampliamente utilizado para documentación técnica, bases de conocimiento y aplicaciones de inteligencia artificial.
+
+A diferencia de extractores de texto tradicionales, MarkItDown intenta preservar la estructura semántica del contenido, incluyendo títulos, listas, tablas, enlaces, fragmentos de código y otros elementos importantes. Esto permite obtener documentos mucho más limpios y fáciles de procesar posteriormente.
+
+## ¿Por qué Markdown?
+
+Markdown es un formato de texto plano que mantiene la estructura lógica de un documento sin depender de formatos propietarios como PDF, DOCX o PPTX. Esto facilita:
+
+- La lectura y edición por personas.
+- El procesamiento automático por software.
+- La indexación y búsqueda de información.
+- La creación de documentación portable y duradera.
+
+## ¿Por qué es útil para LLMs e Inteligencia Artificial?
+
+Los modelos de lenguaje modernos (LLMs) como ChatGPT, Claude, Gemini, DeepSeek o Llama trabajan mejor cuando reciben información estructurada y libre de ruido de formato.
+
+MarkItDown se ha vuelto especialmente popular porque permite transformar grandes colecciones de documentos a un formato que los modelos pueden interpretar de forma mucho más eficiente.
+
+Entre sus ventajas destacan:
+
+- Convierte múltiples formatos a una representación común.
+- Conserva la jerarquía y organización del contenido.
+- Reduce errores producidos por formatos complejos.
+- Facilita el chunking (fragmentación de documentos).
+- Mejora la calidad de sistemas RAG (Retrieval-Augmented Generation).
+- Simplifica la construcción de bases de conocimiento para asistentes de IA.
+
+Por ejemplo, una carpeta con manuales PDF, documentos Word, presentaciones PowerPoint, planillas Excel y archivos HTML puede convertirse completamente a Markdown para posteriormente alimentar un sistema de búsqueda semántica o un asistente basado en LLMs.
+
+Esta capacidad de normalizar grandes volúmenes de información hace que MarkItDown sea una excelente herramienta para estudiantes, investigadores, desarrolladores y empresas que trabajan con inteligencia artificial.
+
+## Formatos compatibles
+
+PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), imágenes, HTML, CSV, JSON, XML, ZIP, entre otros.
 ## Formatos compatibles
 
 PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), imágenes, HTML, CSV, JSON, XML, ZIP, entre otros.
