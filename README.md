@@ -1,4 +1,4 @@
-# MarkItDown, Convertir archivos a Markdown con click derecho
+# MarkItDown. Convertir archivos a Markdown con click derecho
 
 Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows.
 
