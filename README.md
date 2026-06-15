@@ -1,18 +1,60 @@
 # MarkItDown. Convertir archivos a Markdown con click derecho.
 
-Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows.
+Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows, utilizando [MarkItDown](https://github.com/microsoft/markitdown), una herramienta de código abierto desarrollada por Microsoft diseñada para transformar documentos complejos en texto Markdown limpio y estructurado.
 
 Seleccionas uno o varios archivos, click derecho, y se convierten a Markdown automáticamente. Sin abrir programas, sin terminales, sin complicaciones.
 
-Basado en [MarkItDown](https://github.com/microsoft/markitdown) de Microsoft.
-
 ---
 
-## ¿Qué hace exactamente?
+## ¿Qué es MarkItDown?
 
-Convierte documentos a archivos `.md` (Markdown), un formato de texto simple que se puede abrir en cualquier editor.
+MarkItDown es un convertidor universal de documentos que transforma una amplia variedad de formatos (PDF, Word, PowerPoint, Excel, imágenes, HTML, entre otros) en archivos Markdown.
 
-Por ejemplo, si tienes un archivo llamado `informe.pdf`, al hacer click derecho y seleccionar **"Convertir a Markdown"** aparecerá un nuevo archivo `informe.md` en la misma carpeta.
+A diferencia de los extractores de texto tradicionales, MarkItDown intenta preservar la estructura semántica del contenido, incluyendo:
+
+- Títulos y subtítulos
+- Listas numeradas y con viñetas
+- Tablas
+- Enlaces
+- Código fuente
+- Metadatos relevantes
+- Organización jerárquica del documento
+
+El resultado es un archivo Markdown fácil de leer tanto para humanos como para sistemas automatizados.
+
+## ¿Por qué Markdown?
+
+Los modelos de lenguaje (LLMs) como ChatGPT, Claude, Gemini, DeepSeek o Llama procesan mejor información estructurada que documentos binarios complejos como PDF o DOCX.
+
+Markdown ofrece varias ventajas:
+
+- Es texto plano, por lo que no requiere procesamiento adicional.
+- Mantiene la estructura lógica del documento.
+- Reduce el ruido generado por formatos propietarios.
+- Facilita la indexación, búsqueda y fragmentación (chunking) de información.
+- Mejora la calidad de los sistemas RAG (Retrieval-Augmented Generation).
+
+## ¿Por qué MarkItDown es especialmente útil para LLMs?
+
+Cuando se trabaja con grandes cantidades de documentación, uno de los mayores desafíos es convertir archivos heterogéneos en un formato que los modelos puedan entender eficientemente.
+
+MarkItDown resuelve este problema al actuar como una capa de normalización de datos:
+
+- Convierte múltiples formatos a una representación común.
+- Conserva la jerarquía del contenido.
+- Facilita la creación de bases de conocimiento.
+- Simplifica la carga masiva de documentos en asistentes de IA.
+- Reduce errores de interpretación causados por formatos complejos.
+
+Por ejemplo, una carpeta que contiene manuales en PDF, presentaciones PowerPoint, hojas de cálculo Excel, documentos Word y archivos HTML puede convertirse completamente a Markdown para ser utilizada posteriormente por sistemas de búsqueda semántica, motores RAG o asistentes basados en LLMs.
+
+Esto hace que MarkItDown sea especialmente valioso para estudiantes, investigadores, empresas y desarrolladores que necesitan entregar grandes volúmenes de información a modelos de inteligencia artificial de manera eficiente.
+
+## ¿Qué hace este proyecto?
+
+Este repositorio integra MarkItDown directamente en el menú de click derecho de Windows. En vez de usar la terminal cada vez, simplemente haces click derecho sobre un archivo y seleccionas **"Convertir a Markdown"**. El archivo `.md` aparece en la misma carpeta.
+
+Por ejemplo, si tienes un archivo llamado `informe.pdf`, al hacer click derecho y seleccionar la opción aparecerá un nuevo archivo `informe.md` en la misma carpeta.
 
 ## Formatos compatibles
 
