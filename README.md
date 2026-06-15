@@ -1,123 +1,184 @@
-# MarkItDown. Menú contextual para Windows
+# MarkItDown — Convertir archivos a Markdown con click derecho
 
-Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows, usando [MarkItDown](https://github.com/microsoft/markitdown) de Microsoft.
+Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows.
 
-Soporta conversión individual y selección múltiple de archivos.
+Seleccionas uno o varios archivos, click derecho, y se convierten a Markdown automáticamente. Sin abrir programas, sin terminales, sin complicaciones.
 
-## ¿Qué es MarkItDown?
+Basado en [MarkItDown](https://github.com/microsoft/markitdown) de Microsoft.
 
-MarkItDown es una herramienta de código abierto desarrollada por Microsoft que convierte documentos y archivos de múltiples formatos a **Markdown**, un formato de texto ligero ampliamente utilizado para documentación técnica, bases de conocimiento y aplicaciones de inteligencia artificial.
+---
 
-A diferencia de extractores de texto tradicionales, MarkItDown intenta preservar la estructura semántica del contenido, incluyendo títulos, listas, tablas, enlaces, fragmentos de código y otros elementos importantes. Esto permite obtener documentos mucho más limpios y fáciles de procesar posteriormente.
+## ¿Qué hace exactamente?
 
-## ¿Por qué Markdown?
+Convierte documentos a archivos `.md` (Markdown), un formato de texto simple que se puede abrir en cualquier editor.
 
-Markdown es un formato de texto plano que mantiene la estructura lógica de un documento sin depender de formatos propietarios como PDF, DOCX o PPTX. Esto facilita:
-
-- La lectura y edición por personas.
-- El procesamiento automático por software.
-- La indexación y búsqueda de información.
-- La creación de documentación portable y duradera.
-
-## ¿Por qué es útil para LLMs e Inteligencia Artificial?
-
-Los modelos de lenguaje modernos (LLMs) como ChatGPT, Claude, Gemini, DeepSeek o Llama trabajan mejor cuando reciben información estructurada y libre de ruido de formato.
-
-MarkItDown se ha vuelto especialmente popular porque permite transformar grandes colecciones de documentos a un formato que los modelos pueden interpretar de forma mucho más eficiente.
-
-Entre sus ventajas destacan:
-
-- Convierte múltiples formatos a una representación común.
-- Conserva la jerarquía y organización del contenido.
-- Reduce errores producidos por formatos complejos.
-- Facilita el chunking (fragmentación de documentos).
-- Mejora la calidad de sistemas RAG (Retrieval-Augmented Generation).
-- Simplifica la construcción de bases de conocimiento para asistentes de IA.
-
-Por ejemplo, una carpeta con manuales PDF, documentos Word, presentaciones PowerPoint, planillas Excel y archivos HTML puede convertirse completamente a Markdown para posteriormente alimentar un sistema de búsqueda semántica o un asistente basado en LLMs.
-
-Esta capacidad de normalizar grandes volúmenes de información hace que MarkItDown sea una excelente herramienta para estudiantes, investigadores, desarrolladores y empresas que trabajan con inteligencia artificial.
+Por ejemplo, si tienes un archivo llamado `informe.pdf`, al hacer click derecho y seleccionar **"Convertir a Markdown"** aparecerá un nuevo archivo `informe.md` en la misma carpeta.
 
 ## Formatos compatibles
 
-PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), imágenes, HTML, CSV, JSON, XML, ZIP, entre otros.
+- PDF
+- Word (.docx)
+- Excel (.xlsx, .xls)
+- PowerPoint (.pptx)
+- HTML
+- CSV
+- JSON, XML
+- Imágenes (extrae texto si lo tienen)
+- ZIP (convierte los archivos dentro)
 
-## Requisitos
+## ¿Qué necesito?
 
-- Windows 10 o superior
-- Python 3.9 o superior
+- Un computador con **Windows 10** o superior
+- **Python 3.9** o superior (se explica cómo instalarlo más abajo)
+- No se necesitan conocimientos de programación
 
-## Instalación
+---
 
-### 1. Instalar Python
+## Instalación paso a paso
 
-Descarga Python desde [python.org](https://www.python.org/downloads/) si aún no lo tienes.
+### Paso 1: Instalar Python
 
-### 2. Crear un entorno virtual
+Si ya tienes Python instalado, puedes saltar al Paso 2.
 
-Abre PowerShell y ejecuta:
+1. Abre tu navegador y ve a [python.org/downloads](https://www.python.org/downloads/).
+2. Descarga la versión más reciente para Windows.
+3. Ejecuta el instalador.
+4. **Muy importante:** marca la casilla **"Add Python to PATH"** que aparece abajo en la primera pantalla del instalador. Sin esto, los pasos siguientes no funcionarán.
+5. Presiona **"Install Now"** y espera a que termine.
 
-```powershell
+### Paso 2: Verificar que Python funciona
+
+1. Abre **PowerShell** (búscalo en el menú Inicio escribiendo "PowerShell").
+2. Escribe lo siguiente y presiona Enter:
+
+```
+python --version
+```
+
+3. Deberías ver algo como `Python 3.11.4` o similar. Si aparece un número de versión, Python está listo. Si da error, reinstala Python asegurándote de marcar "Add Python to PATH".
+
+### Paso 3: Descargar este proyecto
+
+Tienes dos opciones:
+
+**Opción A — Descargar ZIP (más fácil)**
+
+1. En esta misma página de GitHub, presiona el botón verde **"Code"**.
+2. Selecciona **"Download ZIP"**.
+3. Abre el ZIP descargado y extrae la carpeta en `C:\Users\TU_USUARIO\markitdown-menu\`.
+
+> **¿Cómo sé cuál es mi nombre de usuario?** Abre PowerShell y escribe `echo $env:USERNAME`. Lo que aparezca es tu nombre de usuario.
+
+**Opción B — Clonar con Git**
+
+Si tienes Git instalado, abre PowerShell y ejecuta:
+
+```
+git clone https://github.com/ferjomendez/Markitdown-con-click-derecho.git
+```
+
+Luego renombra la carpeta descargada a `markitdown-menu` y muévela a `C:\Users\TU_USUARIO\`.
+
+### Paso 4: Abrir PowerShell en la carpeta del proyecto
+
+1. Abre la carpeta `markitdown-menu` en el Explorador de archivos.
+2. Haz click en la barra de dirección (donde aparece la ruta), escribe `powershell` y presiona Enter. Esto abre PowerShell directamente en esa carpeta.
+
+### Paso 5: Crear el entorno virtual
+
+En la ventana de PowerShell que se abrió, escribe:
+
+```
 python -m venv .venv
+```
+
+Presiona Enter y espera unos segundos. No mostrará nada si todo salió bien.
+
+> **¿Qué es un entorno virtual?** Es una instalación aislada de Python dentro de la carpeta del proyecto. Así no afecta nada más en tu computador y puedes borrarlo cuando quieras.
+
+### Paso 6: Activar el entorno virtual
+
+Escribe:
+
+```
 .venv\Scripts\activate
 ```
 
-### 3. Instalar MarkItDown
-
-```powershell
-pip install 'markitdown[all]'
-```
-
-### 4. Clonar o descargar este repositorio
-
-Coloca los archivos en `C:\Users\TU_USUARIO\markitdown-menu\`:
+Si funcionó, verás `(.venv)` al inicio de la línea:
 
 ```
-C:\Users\TU_USUARIO\markitdown-menu\
-├── convertir.py
-├── instalar_menu.reg
-└── README.md
+(.venv) PS C:\Users\TU_USUARIO\markitdown-menu>
 ```
 
-### 5. Editar el archivo `.reg`
+> **¿Te da un error de permisos?** Ejecuta primero `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, responde "S" y vuelve a intentar.
 
-Abre `instalar_menu.reg` con el Bloc de notas y reemplaza **todas** las ocurrencias de `TU_USUARIO` con tu nombre de usuario de Windows.
+### Paso 7: Instalar MarkItDown
 
-### 6. Registrar el menú contextual
-
-Haz doble click en `instalar_menu.reg`, acepta el aviso de UAC y confirma la importación.
-
-### 7. Probar
-
-Click derecho sobre cualquier archivo compatible → **"Convertir a Markdown"**.
-
-El archivo `.md` se guarda en la misma carpeta que el archivo original, con el mismo nombre.
-
-## Uso
-
-### Archivo individual
-
-Click derecho sobre un archivo → **Convertir a Markdown**.
-
-### Múltiples archivos
-
-Selecciona varios archivos con `Ctrl+Click` o `Shift+Click`, click derecho → **Convertir a Markdown**. Se convierten todos de una vez.
-
-## Desinstalar
-
-Para eliminar la opción del menú contextual, abre el **Editor del Registro** (`regedit`), navega a:
+Escribe:
 
 ```
-HKEY_CLASSES_ROOT\*\shell\
+pip install "markitdown[all]"
 ```
 
-Y elimina la carpeta **"Convertir a Markdown"**.
+Esto descargará e instalará la herramienta y todas sus dependencias. Puede tardar unos minutos dependiendo de tu internet.
 
-## Notas
+> Si aparece un aviso sobre `ffmpeg`, no te preocupes — eso solo afecta la conversión de archivos de audio. Todo lo demás funciona perfectamente.
 
-- Al instalar con `markitdown[all]` puede aparecer un aviso sobre `ffmpeg`. No es un error, solo significa que la conversión de archivos de **audio** no estará disponible. Todos los demás formatos funcionan con normalidad.
-- El script usa `pythonw.exe` para que la conversión ocurra en segundo plano, sin abrir una ventana de terminal.
+### Paso 8: Configurar el menú de click derecho
+
+1. Abre el archivo `instalar_menu.reg` haciendo click derecho sobre él y seleccionando **"Abrir con" → "Bloc de notas"**.
+2. Verás varias veces el texto `TU_USUARIO`. Reemplázalo por tu nombre de usuario de Windows (el que obtuviste en el Paso 3).
+3. Usa **Ctrl+H** (Buscar y reemplazar) para hacerlo rápido: busca `TU_USUARIO` y reemplaza por tu usuario.
+4. Guarda el archivo con **Ctrl+S** y cierra el Bloc de notas.
+
+### Paso 9: Registrar el menú contextual
+
+1. Haz doble click sobre `instalar_menu.reg`.
+2. Windows mostrará una advertencia preguntando si quieres modificar el Registro. Acepta.
+3. Debería aparecer un mensaje confirmando que las claves se agregaron correctamente.
+
+### Paso 10: Probar
+
+1. Busca cualquier archivo PDF, Word, Excel o PowerPoint en tu computador.
+2. Haz click derecho sobre él.
+3. Deberías ver la opción **"Convertir a Markdown"**.
+4. Haz click y espera unos segundos. Aparecerá un archivo `.md` con el mismo nombre en la misma carpeta.
+
+Para convertir varios archivos a la vez, selecciónalos con Ctrl+Click, luego click derecho → **"Convertir a Markdown"**.
+
+---
+
+## Desinstalación
+
+Si quieres eliminar la opción del menú de click derecho:
+
+1. Presiona **Win + R**, escribe `regedit` y presiona Enter.
+2. En la barra de navegación de la izquierda, busca: `HKEY_CLASSES_ROOT\*\shell`.
+3. Dentro de `shell`, haz click derecho sobre la carpeta **"Convertir a Markdown"** y selecciona **Eliminar**.
+
+Para eliminar la herramienta por completo, simplemente borra la carpeta `markitdown-menu`.
+
+---
+
+## Solución de problemas
+
+**"python no se reconoce como un comando"**
+Python no fue agregado al PATH. Reinstala Python y asegúrate de marcar la casilla "Add Python to PATH".
+
+**No aparece la opción "Convertir a Markdown" al hacer click derecho**
+- Verifica que ejecutaste el archivo `.reg` correctamente.
+- Abre el `.reg` con el Bloc de notas y confirma que reemplazaste `TU_USUARIO` por tu nombre de usuario en todas las líneas.
+
+**El archivo .md está vacío o tiene contenido extraño**
+Algunos archivos pueden tener formatos que MarkItDown no interpreta completamente. Prueba con un documento más simple.
+
+**Error de permisos al activar el entorno virtual**
+Ejecuta en PowerShell: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` y vuelve a intentar.
+
+---
 
 ## Créditos
 
-Basado en [microsoft/markitdown](https://github.com/microsoft/markitdown).
+Herramienta de conversión: [microsoft/markitdown](https://github.com/microsoft/markitdown)
+
+Integración con menú contextual: [Fernando Méndez](https://github.com/ferjomendez)
