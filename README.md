@@ -166,6 +166,7 @@ Para eliminar la herramienta por completo, simplemente borra la carpeta `markitd
 Python no fue agregado al PATH. Reinstala Python y asegúrate de marcar la casilla "Add Python to PATH".
 
 **No aparece la opción "Convertir a Markdown" al hacer click derecho**
+- Despues de dar click derecho en el archivo dar click a "Mostrar mas opciones" o parecido. Deberia de aparecer en el sub-menu.
 - Verifica que ejecutaste el archivo `.reg` correctamente.
 - Abre el `.reg` con el Bloc de notas y confirma que reemplazaste `TU_USUARIO` por tu nombre de usuario en todas las líneas.
 
