@@ -2,11 +2,10 @@ Windows Registry Editor Version 5.00
 
 ; Reemplaza TU_USUARIO con tu nombre de usuario de Windows
 
-; Opcion para un solo archivo
 [HKEY_CLASSES_ROOT\*\shell\Convertir a Markdown]
 @="Convertir a Markdown"
-"Icon"="C:\\Users\\TU_USUARIO\\.venv\\Scripts\\markitdown.exe"
+"Icon"="C:\\Users\\TU_USUARIO\\markitdown-menu\\.venv\\Scripts\\markitdown.exe"
 "MultiSelectModel"="Player"
 
 [HKEY_CLASSES_ROOT\*\shell\Convertir a Markdown\command]
-@="\"C:\\Users\\TU_USUARIO\\.venv\\Scripts\\pythonw.exe\" \"C:\\Users\\TU_USUARIO\\markitdown-menu\\convertir.py\" \"%1\""
+@="\"C:\\Users\\TU_USUARIO\\markitdown-menu\\.venv\\Scripts\\pythonw.exe\" \"C:\\Users\\TU_USUARIO\\markitdown-menu\\convertir.py\" \"%1\""
