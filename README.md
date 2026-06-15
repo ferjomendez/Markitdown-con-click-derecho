@@ -1,4 +1,4 @@
-# MarkItDown — Convertir archivos a Markdown con click derecho
+# MarkItDown, Convertir archivos a Markdown con click derecho
 
 Agrega la opción **"Convertir a Markdown"** al menú de click derecho de Windows.
 
@@ -61,7 +61,7 @@ python --version
 
 Tienes dos opciones:
 
-**Opción A — Descargar ZIP (más fácil)**
+**Opción A: Descargar ZIP (más fácil)**
 
 1. En esta misma página de GitHub, presiona el botón verde **"Code"**.
 2. Selecciona **"Download ZIP"**.
@@ -69,7 +69,7 @@ Tienes dos opciones:
 
 > **¿Cómo sé cuál es mi nombre de usuario?** Abre PowerShell y escribe `echo $env:USERNAME`. Lo que aparezca es tu nombre de usuario.
 
-**Opción B — Clonar con Git**
+**Opción B: Clonar con Git**
 
 Si tienes Git instalado, abre PowerShell y ejecuta:
 
@@ -122,7 +122,7 @@ pip install "markitdown[all]"
 
 Esto descargará e instalará la herramienta y todas sus dependencias. Puede tardar unos minutos dependiendo de tu internet.
 
-> Si aparece un aviso sobre `ffmpeg`, no te preocupes — eso solo afecta la conversión de archivos de audio. Todo lo demás funciona perfectamente.
+> Si aparece un aviso sobre `ffmpeg`, no te preocupes, eso solo afecta la conversión de archivos de audio. Todo lo demás funciona perfectamente.
 
 ### Paso 8: Configurar el menú de click derecho
 
